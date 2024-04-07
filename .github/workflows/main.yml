@@ -1,4 +1,4 @@
-name: CI model to dockerhub
+pythname: CI model to dockerhub
 
 # Trigger
 on:
@@ -22,9 +22,9 @@ jobs:
           password: ${{ secrets.DOCKER_PASSWORD }}
 
       - name: Build docker image
-        run: docker build -t napsterz4/deploy-breast-cancer:v1 .
+        run: docker build -t jeralinfh/deploy_breast_cancer:v1.
 
       - name: Docker push to Dockerhub
-        run: docker push napsterz4/deploy-breast-cancer:v1
+        run: docker push jeralinfh/deploy_breast_cancer:v1
         
     
